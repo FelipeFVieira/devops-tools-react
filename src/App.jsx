@@ -1,10 +1,13 @@
 import { Outlet } from "react-router";
 import './App.css';
+import { SideBarStateProvider } from "./StateContext";
 function App() {
   return (
-    <div className="app">
-      <Outlet/>
-    </div>
+    <SideBarStateProvider>  
+      <div className="app">
+        <Outlet/>
+      </div>
+    </SideBarStateProvider>
   );
 }
 
