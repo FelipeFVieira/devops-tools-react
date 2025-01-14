@@ -37,7 +37,7 @@ const Conteiner = styled.div`
 const SideBarLink = styled.a`
   text-decoration: none;
   &:hover {
-    border-bottom: 2px solid #0D2C40; 
+    border-bottom: 1px solid #0D2C40; 
   }
   padding: 5px 0px;
   color: white;
@@ -48,16 +48,16 @@ const SideBar = ({isOpen}) => {
   return (
     <div>
       <SideBarDiv $isOpen={isOpen}>
-            <h2>services</h2>
+            {/* <h2>services</h2> */}
           <Conteiner >
-              <SideBarLink href="">Computing</SideBarLink>
-              <SideBarLink href="">Storage</SideBarLink>
-              <SideBarLink href="">Database</SideBarLink>
-              <SideBarLink href="">Networks and content delivery</SideBarLink>
-              <SideBarLink href="">Analysis</SideBarLink>
-              <SideBarLink href="">Machine learning</SideBarLink>
-              <SideBarLink href="">Security</SideBarLink>
-              <SideBarLink href="">Migration and transfer</SideBarLink>
+            <SideBarLink href="/analysis">Analysis</SideBarLink>
+            <SideBarLink href="/compute" >Compute</SideBarLink>
+            <SideBarLink href="/database">Database</SideBarLink>
+            <SideBarLink href="/machinelearning">Machine Learning</SideBarLink>
+            <SideBarLink href="/migration">Migration and Transfer</SideBarLink>
+            <SideBarLink href="/network">Networks and Content Delivery</SideBarLink>
+            <SideBarLink href="/security">Security, Identity, & Compliance</SideBarLink>
+            <SideBarLink href="/storage" >Storage</SideBarLink>
           </Conteiner>
       </SideBarDiv>
     </div>

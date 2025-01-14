@@ -5,6 +5,7 @@ import "./index.css";
 
 import App from "./App";
 import HomePage from "./pages/HomePage";
+import StoragePage from "./pages/StoragePage";
 
 const router = createBrowserRouter([
 
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage />,
+      },
+      {
+        path: "/storage",
+        element: <StoragePage />,
       },
     ],
   },
