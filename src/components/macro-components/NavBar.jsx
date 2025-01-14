@@ -12,6 +12,7 @@ const NavBackgroundDiv = styled.div`
   width: 100%;
   height: 13vh;
   max-width: 100%;
+  border-bottom: 1px solid #57606a;
 `;
 
 const MenuButtonDiv = styled.div`
@@ -42,9 +43,8 @@ const NavBar = () => {
         <Logo />
       </NavBackgroundDiv>
 
-      {isSidebarOpen ? (
-        <SideBar/>
-      ) : null}
+      <SideBar isOpen={isSidebarOpen}/>
+     
     </div>
   );
 };
