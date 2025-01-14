@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import logo from '../../images/logo.png';
+import { Link } from 'react-router-dom';
 
 const LogoDiv = styled.div`
   display: flex;
@@ -18,9 +19,12 @@ const LogoDiv = styled.div`
 
 const Logo = () => {
   return (
-    <LogoDiv>
-      <img src={logo} alt='devops logo'></img>
-    </LogoDiv>
+    <Link to="/"> 
+      <LogoDiv>
+        <img src={logo} alt='devops logo'  />
+      </LogoDiv>
+    </Link>
+
   );
 };
 
