@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import Logo from '../micro-components/Logo';
 import menuIcon from '../../images/menu-icon.svg';
 import SideBar from './SideBar';
+import { StateContext } from '../../StateContext';
 
 const NavBackgroundDiv = styled.div`
   display: flex;
@@ -32,12 +33,17 @@ const MenuButtonDiv = styled.div`
 
 const NavBar = () => {
 
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const { isSidebarOpen, setIsSidebarOpen } = useContext(StateContext);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+    console.log(isSidebarOpen);
+  }
 
   return (
     <div>
       <NavBackgroundDiv>
-        <MenuButtonDiv onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
+        <MenuButtonDiv onClick={(toggleSidebar)}>
           <img src={menuIcon} alt='menu'></img>
         </MenuButtonDiv>
         <Logo />

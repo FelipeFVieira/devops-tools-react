@@ -5,7 +5,7 @@ const SideBarDiv = styled.div`
   position: fixed;
   display: column;
   height: 87vh;
-  width: 198px;
+  width: 14.5%;
   background-color: #080a0c;
   color: #02d35f;
   font-family: 'Inter', sans-serif;
@@ -48,7 +48,6 @@ const SideBar = ({isOpen}) => {
   return (
     <div>
       <SideBarDiv $isOpen={isOpen}>
-            {/* <h2>services</h2> */}
           <Conteiner >
             <SideBarLink href="/analysis">Analysis</SideBarLink>
             <SideBarLink href="/compute" >Compute</SideBarLink>
