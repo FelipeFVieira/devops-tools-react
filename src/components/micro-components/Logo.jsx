@@ -24,7 +24,6 @@ const Logo = () => {
         <img src={logo} alt='devops logo'  />
       </LogoDiv>
     </Link>
-
   );
 };
 

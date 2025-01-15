@@ -1,12 +1,14 @@
 import React from 'react';
 import NavBar from '../components/macro-components/navbar';
-import ComingSoon from '../components/macro-components/ComingSoon';
+import Body from '../components/macro-components/Body';
 
 const ComputePage = () => {
     return (
         <div>
             <NavBar></NavBar>
-            <ComingSoon></ComingSoon>
+            <Body>
+                <h1>Coming Soon!</h1>
+            </Body>
         </div>
     )
 }
